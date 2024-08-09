@@ -1,0 +1,48 @@
+#include <stdio.h>
+struct friends
+{
+ char name[20];
+ char pet[20];
+ int pn; //phone number
+};
+struct type
+{
+ char tof[20];//type of friend
+ char nocf[20];//Name of common friends
+ char pvt[20];//places visited together
+};
+void main()
+{ 
+int n;
+ printf("\nEnter the number of friends:");
+ scanf("%d",&n);
+ struct friends fnd[n];//friend
+ struct type tp[n];//type
+ for (int i = 0 ; i < n ; i++)
+ {
+ printf("\nEnter Friend name:");
+ scanf("%s",&fnd[i].name);
+ printf("\nEnter Pet name:");
+ scanf("%s",&fnd[i].pet);
+ printf("\nEnter phone number:");
+ scanf("%d",&fnd[i].pn);
+ printf("\nEnter the type of friend:");
+ scanf("%s",&tp[i].tof);
+ printf("\nEnter the Name of common friends:");
+ scanf("%s",&tp[i].nocf);
+ printf("\nEnter the places visited together:");
+ scanf("%s",&tp[i].pvt);
+ }
+ printf("\nFriends list");
+ for(int i = 0 ; i < n ; i++)
+ {
+ printf("\n\nS.No:%d",i+1);
+ printf("\nName:%s",fnd[i].name);
+ printf("\nPet name:%s",fnd[i].pet);
+ printf("\nPhone number:%d",fnd[i].pn);
+ printf("\nType of friend:%s",tp[i].tof);
+ printf("\nName of common friends:%s",tp[i].nocf);
+ printf("\nPlaces visited together:%s",tp[i].pvt);
+
+ }
+}
